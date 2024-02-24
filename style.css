@@ -1,20 +1,89 @@
-* {
-    margin: 0px;
-    padding: 0px;
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Outfit', sans-serif;
 }
 
 body {
-    width: 100vh;
+    width: 100%;
     height: 100vh;
     background-image: url(images/fundo.jpg);
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
-#form-conteiner {
-    width: 500px;
-    height: 600px;
-    background-color: rgb(241, 241, 241);
+.conteiner {
+    max-width: 1280px;
     margin: auto;
+    padding: 6%;
+}
+
+form {
+    background-color: #fff;
+    max-width: 500px;
+    height: 450px;
+    padding: 40px;
+    border-radius: 20px;
+}
+
+form > h1 {
+    text-align: center;
+    margin-bottom: 10px;
+    font-size: 22pt;
+    color: #2d5966;
+}
+
+form > p {
+    text-align: center;
+    margin-bottom: 25px;
+}
+
+.input-single {
+    position: relative;
+    margin: 30px 0;
+}
+
+.input-single label {
+    position: absolute;
+    left: 0;
+    bottom: 5px;
+    transition: 0.2s;
+    cursor: text;
+    color: #808080;
+}
+
+.input {
+    width: 100%;
+    border: 0;
+    border-bottom: 2px solid #808080;
+    padding: 5px;
+    font-size: 16px;
+    outline: 0;
+}
+
+form > .input-single > .input:focus ~ label,
+form > .input-single > .input:valid ~ label {
+    transform: translatey(-24px);
+    font-size: 12px;
+    color: #2d5966;
+}
+
+.btn {
+    text-align: center;
+}
+
+form input[type=submit] {
+    color: #fff;
+    font-size: 14pt;
+    padding: 10px 40px;
+    border-radius: 10px;
+    background-color: #2d5966;
+    border: 0px;
 }
